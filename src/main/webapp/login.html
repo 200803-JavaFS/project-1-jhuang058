@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        html,
+        body {
+            height: 80%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container" id="fullcontainer">
+        <!--bootstrap container-->
+        <h1>Welcome to the Revature Reimbursement Portal!</h1>
+        <br>
+        <div class="row" id="login-row">
+            <label for="username">Username:&nbsp;
+                <input type="text" id="username">
+            </label>
+            <label for="password">Password:&nbsp;
+                <input type="password" id="password">
+            </label>
+            <button id="btn" class="btn btn-success">Log In</button>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <div class="row" id="table-row">
+        <!-- <table class="table-hover table-bordered" id="">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="">
+            </tbody>
+        </table> -->
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
