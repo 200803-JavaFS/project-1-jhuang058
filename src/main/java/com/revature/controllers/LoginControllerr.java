@@ -35,12 +35,12 @@ public class LoginControllerr {
 			User u = om.readValue(body, User.class); //readValue() takes JSON data and put it in an object you specify
 			
 			if (ls.login(u) != null) {
+				User user = ls.login(u);
 				HttpSession ses = req.getSession(); // creates a new session
 				ses.setAttribute("user", u);
 				ses.setAttribute("loggedin", true);
 				res.setStatus(200);
-				res.getWriter().println("Login Successful");
-				res.getWriter().println(om.writeValueAsString(ls.login(u)));
+				res.getWriter().println(om.writeValueAsString(user));
 			} else {
 				HttpSession ses = req.getSession(false);
 				if (ses != null) {

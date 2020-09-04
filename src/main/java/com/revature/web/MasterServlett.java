@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.controllers.LoginControllerr;
+import com.revature.controllers.ReimbursementController;
 
 public class MasterServlett extends HttpServlet {
 	
 	private static LoginControllerr lc = new LoginControllerr();
+	private static ReimbursementController rc = new ReimbursementController();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -30,26 +32,26 @@ public class MasterServlett extends HttpServlet {
 
 		System.out.println(Arrays.toString(portions));
 
-		// URI = avenger/1
+		// URI = reimbursement/1
 		try {
 			switch (portions[0]) {
-//			case "avenger":
-//				if (req.getSession(false) != null && (boolean) req.getSession().getAttribute("loggedin")) {
-//					if (req.getMethod().equals("GET")) {
-//						if (portions.length == 2) {
-//							int id = Integer.parseInt(portions[1]);
-//							ac.getAvenger(res, id);
-//						} else if (portions.length == 1) {
-//							ac.getAllAvengers(res);
-//						}
-//					} else if (req.getMethod().equals("POST")) {
-//						ac.addAvenger(req, res);
-//					}
-//				} else {
-//					res.setStatus(403);
-//					res.getWriter().println("You must be logged in to do that!");
-//				}
-//				break;
+			case "reimbursement":
+				if (req.getSession(false) != null && (boolean) req.getSession().getAttribute("loggedin")) {
+					if (req.getMethod().equals("GET")) {
+						if (portions.length == 2) {
+							int id = Integer.parseInt(portions[1]);
+							rc.getReimbByAuthor(res, id);
+						} else if (portions.length == 1) {
+							rc.getAllReimbursements(res);
+						}
+					} else if (req.getMethod().equals("POST")) {
+						rc.addReimbursement(req, res);
+					}
+				} else {
+					res.setStatus(403);
+					res.getWriter().println("You must be logged in to do that!");
+				}
+				break;
 			case "login":
 				lc.login(req, res);
 				break;
@@ -87,23 +89,23 @@ public class MasterServlett extends HttpServlet {
 		// URI = avenger/1
 		try {
 			switch (portions[0]) {
-//			case "avenger":
-//				if (req.getSession(false) != null && (boolean) req.getSession().getAttribute("loggedin")) {
-//					if (req.getMethod().equals("GET")) {
-//						if (portions.length == 2) {
-//							int id = Integer.parseInt(portions[1]);
-//							ac.getAvenger(res, id);
-//						} else if (portions.length == 1) {
-//							ac.getAllAvengers(res);
-//						}
-//					} else if (req.getMethod().equals("POST")) {
-//						ac.addAvenger(req, res);
-//					}
-//				} else {
-//					res.setStatus(403);
-//					res.getWriter().println("You must be logged in to do that!");
-//				}
-//				break;
+			case "reimbursement":
+				if (req.getSession(false) != null && (boolean) req.getSession().getAttribute("loggedin")) {
+					if (req.getMethod().equals("GET")) {
+						if (portions.length == 2) {
+							int id = Integer.parseInt(portions[1]);
+							rc.getReimbByAuthor(res, id);
+						} else if (portions.length == 1) {
+							rc.getAllReimbursements(res);
+						}
+					} else if (req.getMethod().equals("POST")) {
+						rc.addReimbursement(req, res);
+					}
+				} else {
+					res.setStatus(403);
+					res.getWriter().println("You must be logged in to do that!");
+				}
+				break;
 			case "login":
 				lc.login(req, res);
 				break;

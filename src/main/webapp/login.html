@@ -51,20 +51,51 @@
     </div>
 
     <div class="row" id="table-row">
-        <!-- <table class="table-hover table-bordered" id="">
+        <table class="table-hover table-bordered" id="">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Amount</th>
+                    <th>Submitted</th>
+                    <th>Resolved</th>
+                    <th>Description</th>
+                    <th>Author</th>
+                    <th>Resolver</th>
+                    <th>Status</th>
+                    <th>Type</th>
                 </tr>
             </thead>
-            <tbody id="">
+            <tbody id="reimbbody">
             </tbody>
-        </table> -->
+        </table>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="addReimb">
+        <form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                    </tr>
+                    <tr>
+                        <th><input type="number" step="0.01" id="amount"></th>
+                        <th><input type="text" id="description"></th>
+                        <th><select id="type">
+                                <option value="Travel">Travel</option>
+                                <option value="Certification">Certification</option>
+                                <option value="Relocation">Relocation</option>
+                            </select>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <input type="submit" value="Add Request">
+        </form>
     </div>
 
     <script src="login.js"></script>
