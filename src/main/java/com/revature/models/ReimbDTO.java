@@ -7,7 +7,7 @@ public class ReimbDTO {
 	public int id;
 	public double amount;
 	public Timestamp submitted;
-	public String resolved;
+	public Timestamp resolved;
 	public String description;
 	public String receipt;
 	public int author;
@@ -37,7 +37,7 @@ public class ReimbDTO {
 		this.author = author;
 		this.type = type;
 	}
-	public ReimbDTO(int id, double amount, Timestamp submitted, String resolved, String description, String receipt,
+	public ReimbDTO(int id, double amount, Timestamp submitted, Timestamp resolved, String description, String receipt,
 			int author, int resolver, int status, int type) {
 		super();
 		this.id = id;
@@ -51,7 +51,7 @@ public class ReimbDTO {
 		this.status = status;
 		this.type = type;
 	}
-	public ReimbDTO(double amount, Timestamp submitted, String resolved, String description, String receipt,
+	public ReimbDTO(double amount, Timestamp submitted, Timestamp resolved, String description, String receipt,
 			int author, int resolver, int status, int type) {
 		super();
 		this.amount = amount;
@@ -135,6 +135,5 @@ public class ReimbDTO {
 				+ ", description=" + description + ", receipt=" + receipt + ", author=" + author + ", resolver="
 				+ resolver + ", status=" + status + ", type=" + type + "]";
 	}
-	
-	
+
 }

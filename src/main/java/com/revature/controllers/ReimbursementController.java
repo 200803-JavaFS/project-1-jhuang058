@@ -60,16 +60,12 @@ public class ReimbursementController {
 		
 		String body = new String(s);
 		
-		System.out.println(body);
-		
 		//public ReimbDTO(double amount, String description, (String receipt), String author, int type)
 		//public ReimbDTO(double amount, Timestamp submitted, String resolved, String description, String receipt,
 		//String author, String resolver, int status, int type)
 		ReimbDTO rd = om.readValue(body, ReimbDTO.class);
 		rd.submitted = new Timestamp(System.currentTimeMillis());
 		rd.status = 1;
-		
-		System.out.println(rd);
 		
 		if (rs.addReimbursement(rd)) {
 			res.setStatus(201);
@@ -103,11 +99,7 @@ public class ReimbursementController {
 		
 		String body = new String(s);
 		
-		System.out.println(body);
-		
 		ReimbDTO rd = om.readValue(body, ReimbDTO.class);
-		
-		System.out.println(rd);
 		
 		if (rs.updateReimbursement(rd)) {
 			res.setStatus(201);
