@@ -1,5 +1,6 @@
 package com.revature.services;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import com.revature.daos.IReimbDAO;
@@ -39,6 +40,24 @@ public class ReimbursementService {
 		System.out.println(r);
 		
 		return rDao.addReimbursement(r);
+	}
+
+	public List<Reimbursement> findByStatus(int id) {
+		return rDao.findByStatus(id);
+	}
+
+	public boolean updateReimbursement(ReimbDTO rd) {
+		Reimbursement r = rDao.findById(rd.id);
+		
+		System.out.println("before update: "+r);
+		
+		r.setStatus(rDao.findStatus(rd.status));
+		r.setResolver(uDao.findById(rd.resolver));
+		r.setResolved(new Timestamp(System.currentTimeMillis()));
+		
+		System.out.println("to be updated: "+r);
+		
+		return rDao.updateReimbursement(r);
 	}
 
 }

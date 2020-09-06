@@ -17,6 +17,11 @@ public class ReimbDTO {
 	
 	
 	
+	public ReimbDTO(int id, int status) {
+		super();
+		this.id = id;
+		this.status = status;
+	}
 	public ReimbDTO(double amount, String description, int author, int type) {
 		super();
 		this.amount = amount;

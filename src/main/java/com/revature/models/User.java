@@ -34,7 +34,7 @@ public class User implements Serializable{
 	@Column (nullable=false, unique=true)
 	private String email;
 	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name="role_id")
+	@JoinColumn(name="role_id", nullable=false)
 	private UserRole role;
 	
 	public User() {

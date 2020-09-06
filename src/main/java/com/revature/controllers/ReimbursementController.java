@@ -80,4 +80,42 @@ public class ReimbursementController {
 		
 	}
 
+	public void getReimbByStatus(HttpServletResponse res, int id) throws IOException {
+		List<Reimbursement> list = rs.findByStatus(id);
+		
+		res.setStatus(200);
+		String json = om.writeValueAsString(list);
+		res.getWriter().println(json);
+		
+	}
+
+	public void updateReimbursement(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		BufferedReader reader = req.getReader();
+		
+		StringBuilder s = new StringBuilder();
+		
+		String line = reader.readLine();
+
+		while (line != null) {
+			s.append(line);
+			line = reader.readLine();
+		}
+		
+		String body = new String(s);
+		
+		System.out.println(body);
+		
+		ReimbDTO rd = om.readValue(body, ReimbDTO.class);
+		
+		System.out.println(rd);
+		
+		if (rs.updateReimbursement(rd)) {
+			res.setStatus(201);
+			res.getWriter().println("Reimbursement was submitted");
+		} else {
+			res.setStatus(403);
+		}
+		
+	}
+
 }

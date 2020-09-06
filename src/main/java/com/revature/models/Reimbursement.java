@@ -32,7 +32,7 @@ public class Reimbursement implements Serializable{
 	private Blob receipt;
 	
 	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name="author_user_id")
+	@JoinColumn(name="author_user_id", nullable=false)
 	private User author;
 	
 	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
@@ -40,11 +40,11 @@ public class Reimbursement implements Serializable{
 	private User resolver;
 	
 	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name="status_id")
+	@JoinColumn(name="status_id", nullable=false)
 	private ReimbursementStatus status;
 	
 	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name="type_id")
+	@JoinColumn(name="type_id", nullable=false)
 	private ReimbursementType type;
 	
 	public Reimbursement() {

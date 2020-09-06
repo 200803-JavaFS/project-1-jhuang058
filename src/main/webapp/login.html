@@ -51,13 +51,13 @@
     </div>
 
     <div class="row" id="table-row">
-        <table class="table-hover table-bordered" id="">
+        <table hidden="true" class="table-hover table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Amount</th>
-                    <th>Submitted</th>
-                    <th>Resolved</th>
+                    <th>Date Submitted</th>
+                    <th>Date Resolved</th>
                     <th>Description</th>
                     <th>Author</th>
                     <th>Resolver</th>
@@ -74,8 +74,8 @@
     <br>
 
     <div id="addReimb">
-        <form>
-            <table>
+        <form id="reqForm">
+            <table hidden=true>
                 <thead>
                     <tr>
                         <th>Amount</th>
@@ -94,8 +94,9 @@
                     </tr>
                 </thead>
             </table>
-            <input type="submit" value="Add Request">
         </form>
+        <span id="options-row"></span>
+        <span id="result"></span>
     </div>
 
     <script src="login.js"></script>

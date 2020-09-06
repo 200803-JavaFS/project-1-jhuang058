@@ -56,9 +56,11 @@ public class LoginControllerr {
 		HttpSession ses = req.getSession(false);
 
 		if (ses != null) {
-			User u = (User) ses.getAttribute("user");
+			//User u = (User) ses.getAttribute("user");
+			ses.invalidate();
 			res.setStatus(200);
-			res.getWriter().println(u.getUsername() + " has logged out successfully");
+			System.out.println("log out completed");
+			//res.getWriter().println(u.getUsername() + " has logged out successfully");
 		} else {
 			res.setStatus(400);
 			res.getWriter().println("You must be logged in to logout!");

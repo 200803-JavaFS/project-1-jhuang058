@@ -4,8 +4,11 @@ import java.util.List;
 
 import javax.persistence.Query;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
+import com.revature.models.ReimbDTO;
 import com.revature.models.Reimbursement;
 import com.revature.models.ReimbursementStatus;
 import com.revature.models.ReimbursementType;
@@ -55,7 +58,7 @@ public class ReimbDAO implements IReimbDAO {
 		try {
 			ses.save(r);
 			return true;
-		} catch (Exception e) {
+		} catch (HibernateException e) {
 			e.printStackTrace();
 			return false;
 		}
@@ -70,6 +73,34 @@ public class ReimbDAO implements IReimbDAO {
 		query.setParameter("author", u);
 		
 		return query.getResultList();
+	}
+
+	@Override
+	public List<Reimbursement> findByStatus(int id) {
+		Session ses = HibernateUtil.getSession();
+		
+		ReimbursementStatus rs = findStatus(id);
+		Query query = ses.createQuery("FROM Reimbursement where status=:rs",Reimbursement.class);
+		query.setParameter("rs", rs);
+		
+		return query.getResultList();
+	}
+
+	@Override
+	public boolean updateReimbursement(Reimbursement r) {
+		Session ses = HibernateUtil.getSession();
+		
+		Transaction tx = ses.beginTransaction();
+		
+		try {
+			ses.merge(r);
+			tx.commit();
+			return true;
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+			return false;
+		}
 	}
 
 }
