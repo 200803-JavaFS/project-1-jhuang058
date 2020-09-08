@@ -90,3 +90,43 @@
 2020-09-06 00:38:48 INFO  ReimbursementService:53 - finding reimbursements of status id 1
 2020-09-06 00:38:48 INFO  ReimbursementService:41 - adding reimbursement to database
 2020-09-06 00:38:48 INFO  ReimbursementService:36 - finding all reimbursements
+2020-09-07 20:57:31 INFO  LoginServicee:19 - logging in
+2020-09-07 20:57:44 INFO  LoginServicee:19 - logging in
+2020-09-07 21:02:31 INFO  LoginServicee:19 - logging in
+2020-09-07 21:02:31 INFO  LoginServicee:19 - logging in
+2020-09-07 21:02:41 INFO  ReimbursementService:31 - finding reimbursements with author id 2
+2020-09-07 21:03:56 INFO  ReimbursementService:41 - adding reimbursement to database
+2020-09-07 21:04:00 INFO  ReimbursementService:31 - finding reimbursements with author id 2
+2020-09-07 21:05:44 INFO  ReimbursementService:31 - finding reimbursements with author id 2
+2020-09-07 21:05:50 INFO  ReimbursementService:41 - adding reimbursement to database
+2020-09-07 21:05:52 INFO  ReimbursementService:31 - finding reimbursements with author id 2
+2020-09-07 21:06:07 INFO  LoginServicee:19 - logging in
+2020-09-07 21:06:07 INFO  LoginServicee:19 - logging in
+2020-09-07 21:06:19 INFO  ReimbursementService:36 - finding all reimbursements
+2020-09-07 21:06:21 INFO  ReimbursementService:53 - finding reimbursements of status id 1
+2020-09-07 21:06:24 INFO  ReimbursementService:58 - updating reimbursement
+2020-09-07 21:06:28 INFO  ReimbursementService:53 - finding reimbursements of status id 3
+2020-09-07 21:06:30 INFO  ReimbursementService:53 - finding reimbursements of status id 2
+2020-09-07 21:06:31 INFO  ReimbursementService:53 - finding reimbursements of status id 3
+2020-09-07 21:06:35 INFO  ReimbursementService:53 - finding reimbursements of status id 2
+2020-09-07 21:06:38 INFO  ReimbursementService:53 - finding reimbursements of status id 1
+2020-09-07 21:06:39 INFO  ReimbursementService:36 - finding all reimbursements
+2020-09-07 21:06:43 INFO  ReimbursementService:53 - finding reimbursements of status id 2
+2020-09-07 21:06:46 INFO  ReimbursementService:53 - finding reimbursements of status id 3
+2020-09-07 21:06:48 INFO  ReimbursementService:53 - finding reimbursements of status id 1
+2020-09-07 21:06:49 INFO  ReimbursementService:36 - finding all reimbursements
+2020-09-07 21:07:00 INFO  ReimbursementService:53 - finding reimbursements of status id 2
+2020-09-07 21:07:01 INFO  ReimbursementService:53 - finding reimbursements of status id 1
+2020-09-07 21:07:02 INFO  ReimbursementService:36 - finding all reimbursements
+2020-09-07 21:07:05 INFO  ReimbursementService:53 - finding reimbursements of status id 2
+2020-09-07 21:09:22 INFO  LoginServicee:19 - logging in
+2020-09-07 21:09:22 INFO  LoginServicee:19 - logging in
+2020-09-07 21:09:30 INFO  ReimbursementService:41 - adding reimbursement to database
+2020-09-07 21:09:31 INFO  ReimbursementService:31 - finding reimbursements with author id 2
+2020-09-07 21:09:59 INFO  LoginServicee:19 - logging in
+2020-09-07 21:09:59 INFO  LoginServicee:19 - logging in
+2020-09-07 21:10:00 INFO  ReimbursementService:53 - finding reimbursements of status id 2
+2020-09-07 21:10:04 INFO  ReimbursementService:53 - finding reimbursements of status id 3
+2020-09-07 21:10:10 INFO  ReimbursementService:53 - finding reimbursements of status id 1
+2020-09-07 21:10:22 INFO  ReimbursementService:58 - updating reimbursement
+2020-09-07 21:10:24 INFO  ReimbursementService:36 - finding all reimbursements

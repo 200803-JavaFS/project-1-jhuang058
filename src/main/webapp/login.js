@@ -142,7 +142,7 @@ async function findByStatusFunc() {
             cell3.innerHTML = new Date(reimb.submitted);
             row.appendChild(cell3);
             let cell4 = document.createElement("td");
-            //cell4.innerHTML = reimb.resolved;
+            cell4.innerHTML = new Date(reimb.resolved);
             row.appendChild(cell4);
             let cell5 = document.createElement("td");
             cell5.innerHTML = reimb.description;
@@ -151,7 +151,7 @@ async function findByStatusFunc() {
             cell9.innerHTML = reimb.author.firstName + " " + reimb.author.lastName;
             row.appendChild(cell9);
             let cell6 = document.createElement("td");
-            //cell6.innerHTML = reimb.resolver;
+            cell6.innerHTML = reimb.resolver.firstName+" "+reimb.resolver.lastName;
             row.appendChild(cell6);
             let cell7 = document.createElement("td");
             cell7.innerHTML = reimb.status.status;
